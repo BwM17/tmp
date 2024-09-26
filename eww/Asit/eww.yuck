@@ -1,0 +1,24 @@
+;; windows.yuck 
+(include "modules/bar.yuck")
+(include "modules/vars.yuck")
+(include "modules/misc.yuck")
+(include "modules/player.yuck") 
+(include "modules/windows.yuck")
+(include "modules/circular.yuck")  
+(include "modules/slider.yuck")
+(include "modules/power.yuck")
+(include "modules/infoslider.yuck") 
+(include "modules/settings.yuck")   
+(include "modules/quicksett.yuck")
+(include "modules/spotify.yuck")  
+(include "modules/wifi-menu.yuck")
+
+
+
+
+
+
+
+
+
+

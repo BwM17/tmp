@@ -1,0 +1,30 @@
+.power-bx{
+    margin-right: 0.4rem;  
+}
+
+.hib-btn, .sus-btn, .reb-btn, .exi-btn{  
+    padding: 0 0.1rem;
+	font-size: 16px;
+	color: $Background-Alt;
+}
+
+.pow-btn{   
+    font-size: 19px;
+	color: #F2828B;
+}
+
+.sus-btn:hover{
+	color: #EBCB8B;
+}
+
+.reb-btn:hover{
+	color: #81C995;
+}
+
+.hib-btn:hover{
+	color: #82AAFF; 
+}
+
+.exi-btn:hover{
+	color: #73daca; 
+}

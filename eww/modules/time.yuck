@@ -1,0 +1,12 @@
+(defwidget time []
+    (box  
+        :space-evenly false
+        :valign "center"
+        :class "time" 
+        (label 
+            :text time
+        )
+    )
+
+
+)

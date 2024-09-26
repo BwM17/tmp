@@ -1,0 +1,44 @@
+(defvar slider_reveal false)
+
+
+
+(defwidget slider [] 
+    (box 
+        :class "slider_outer"
+        (eventbox
+            :onhover "${eww} update slider_reveal=true"
+            :onhoverlost "${eww} update slider_reveal=false" 
+            (box
+                :space-evenly false 
+                (box 
+                    :space-evenly false
+                    (label
+                        :class "vol_icon" 
+                        :text "󰎈"
+                    )
+                    (label 
+                        :class "vol_per"
+                        :text "${vol}%"
+                    )
+                
+                )
+                (revealer
+                    :duration "400ms"
+                    :transition "slideleft"
+                    :reveal slider_reveal
+                    (box 
+                        :class "slider_inner"
+                        (scale
+                            :orientation "h"
+                            :value vol
+                            :min 0
+                            :max 101
+                            :onchange "amixer -D pulse sset Master {}%"
+                        )
+                    )
+                )
+            )
+        
+        )
+    )
+)

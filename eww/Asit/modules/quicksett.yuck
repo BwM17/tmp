@@ -1,0 +1,16 @@
+ 
+(defwidget quicksetting [style onclick icon_class icon text]   
+    (box  
+        :class "sett"  
+        :style style
+        (eventbox
+            :onclick onclick
+            (box   
+                :hexpand false
+                :space-evenly false
+                (label :class "sett_icon" :style icon_class :text icon)   
+                (label :text text)    
+            )
+        )
+    ) 
+)

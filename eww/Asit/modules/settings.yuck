@@ -1,0 +1,110 @@
+(defwidget setting[] 
+    (box  
+        :space-evenly false
+        :orientation "v"
+        (header) 
+        (settings) 
+        (spotify)
+    )
+) 
+
+
+(defwidget header []
+    (box 
+        :class "header"
+        :valign "start"
+        (box  
+            :halign "start"
+            (label 
+                :class "user"
+                :text user
+            )  
+        ) 
+        (box  
+            :hexpand false 
+            :halign "end"
+            :class "header_bat"  
+            (label
+                :text "  at ${bat}%"
+            )
+        ) 
+    )
+
+) 
+
+
+
+
+(defwidget settings [] 
+    (box
+        :orientation "v"  
+        :space-evenly false   
+        :valign "start"
+        (box 
+            :orientation "v"
+            (slider 
+                :class "vol_slider" 
+                :value vol
+                :icon_class "vol_icon" 
+                :icon  "󰎈" 
+                :onchange "amixer sset Master {}%"
+            )    
+            (slider 
+                :class "bright_slider" 
+                :value bright
+                :icon_class "bright_icon" 
+                :icon "" 
+                :onchange "brightnessctl set {}%"
+            )  
+        )  
+        (box :orientation "v" 
+            :class "quicks"  
+            :hexpand false  
+            :space-evenly false
+        (box 
+            :orientation "h"   
+            (box 
+                :class "sett"  
+                :style wifistyle
+                (label :text "wifi")  
+            ) 
+            (quicksetting
+                :style night
+                :onclick "scripts/nightmode"  
+                :icon_class night_style
+                :icon night_icon  
+                :text "nightmode" 
+            )
+        )    
+        (box 
+            :orientation "h"   
+            (quicksetting
+                :style airplane
+                :onclick "scripts/airplane"  
+                :icon_class "setti"
+                :icon airplane_icon
+                :text "airplane"
+            ) 
+            (quicksetting 
+                :style powersafe
+                :onclick "scripts/powersafe"  
+                :icon_class power_style
+                :icon powersafe_icon
+                :text "powersafe"
+            
+            )
+        )  
+        )
+    )  
+) 
+
+
+
+
+
+
+;; add quick settings  
+;bluetooth 
+;wifi 
+
+;;add spotify 

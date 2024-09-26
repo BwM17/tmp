@@ -1,0 +1,20 @@
+(defwindow wifi
+	:monitor 0
+	:geometry (geometry 
+			:width "800px"   
+			:height "400px"    
+			:anchor "center")  
+	:stacking "bg" 
+	;;:reserve (struts :distance "59px" :side "top")
+	:windowtype "dock"
+	:wm-ignore false
+	(Test))  
+
+
+(defvar wifi-menu "(label :text \"Ligma\")")
+
+(defwidget Test []
+    (literal
+        :content wifi-menu
+    ) 
+)

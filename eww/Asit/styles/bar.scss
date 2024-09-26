@@ -1,0 +1,50 @@
+//Barbat
+
+.logo_launcher, .bat{       
+    color: $Background;
+    font-size: 28px;
+    border-radius: 50px; 
+    background: linear-gradient(to left, $Blue, $Lightblue)
+} 
+
+.bat{
+    padding: 0.5rem 0.5rem;   
+    margin-right: 10px; 
+} 
+
+.logo_launcher{ 
+    margin-left: 10px; 
+    padding: 0.2rem 0.5rem;   
+
+}
+
+.works{ 
+    margin-left: 10px;   
+    background-color: $Background-Alt;
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px; 
+    
+}
+
+.workspace-focused, .workspace-occupied{
+    font-size: 26px;
+}
+
+.workspace-occupied{
+    color: #bbdfd9
+}
+
+.workspace-empty{
+    color: #999999;
+    font-size: 26px; 
+}
+
+.workspace-focused:hover, .workspace-occupied:hover, .workspace-empty:hover{
+    font-size: 20px;
+}  
+
+
+
+
+
+

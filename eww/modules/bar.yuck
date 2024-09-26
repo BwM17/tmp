@@ -1,0 +1,64 @@
+;;bars
+
+
+(defwidget bar []
+	(centerbox 
+        :orientation "h"  
+        (start) 
+            ""
+        (end)
+    )  
+)
+(defwidget Battery[]
+    (box 
+        :space-evenly false 
+        :valign "center"
+        :class "bat_outer"
+        (circular-progress 
+            :value bat
+            :thickness 2
+            :clockwise true 
+            (label 
+                :class "bat_inner"
+                :text "${bat}"
+            )
+        )
+    )   
+
+) 
+
+(defwidget start[]
+    (box 
+        :class "start"  
+        :halign "start" 
+        :space-evenly false
+        (box 
+            :class "logo"
+            (image
+                :path "img/nixos_logo.png" 
+                :image-width 25 
+                :image-height 25 
+            ) 
+        ) 
+        (workspaces_widget)
+    )
+) 
+
+
+
+
+(defwidget end[] 
+    (box  
+        :class "end" 
+        :halign "end" 
+        :hexpand false
+        :space-evenly false  
+    (launcher) 
+    (Battery)  
+    (wifi_status)
+    (time)
+    (power) 
+    )
+)
+
+

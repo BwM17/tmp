@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+EWW=`which eww`
+
+## Run eww daemon if not running already
+if [[ ! `pidof eww` ]]; then
+	${EWW} daemon
+	sleep 1
+fi
+
+## Open widgets 
+run_eww() {
+	${EWW} open vol
+    sleep 10
+    ${EWW} close vol
+}
+
+
+case $1 in 
+
+    "--dec") 
+    amixer sset Master 10%-
+    run_eww 
+    ;; 
+    
+    "--inc") 
+    amixer sset Master 10%+
+    run_eww
+    ;;
+
+    *)
+        echo "no params given"; 
+    ;; 
+esac  
+
+

@@ -1,0 +1,46 @@
+
+
+(defwidget mygraph [ onhover onhoverlost icon-class icon percentage reveal graph-value] 
+    (box 
+        :class "graph_outer"
+        (eventbox
+            :onhover onhover 
+            :onhoverlost onhoverlost 
+            (box
+                :space-evenly false 
+                (box 
+                    :space-evenly false
+                    (label
+                        :class icon-class
+                        :text icon
+                    )
+                    (label 
+                        :class "graph_per"
+                        :text percentage 
+                    )
+                
+                )
+                (revealer
+                    :duration "400ms"
+                    :transition "slideleft"
+                    :reveal reveal 
+                    (box 
+                        :class "graph_inner"
+                        :valign "center" 
+                        (graph 
+                            :value graph-value
+                            :thickness 1
+                            :time-range "20s"
+                            :min 0
+                            :max 100 
+                            :dynamic true
+                            :linestyle "mitter"
+                       
+                        )
+                    )
+                )
+            )
+        
+        )
+    )
+)

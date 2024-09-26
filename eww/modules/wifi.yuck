@@ -1,0 +1,11 @@
+
+
+(defwidget wifi_status []
+    (box  
+        :tooltip ssid
+        (label
+            :text wifi_status
+        ) 
+        
+    )
+)

@@ -1,0 +1,27 @@
+(defwidget settings [] 
+    (box  
+        :orientation "v"
+        :class "Settings"  
+        (box 
+            :valign "start" 
+            :vexpand false 
+            :orientation "v" 
+            :space-evenly false
+            (slider
+                :class "vol_slider"
+                :value vol
+                :icon_class "vol_icon"
+                :icon "󰎈"
+                :onchange "amixer sset Master {}%"
+            )
+            (slider 
+                :class "bright_slider"
+                :value bright
+                :icon_class "bright_icon" 
+                :icon "" 
+                :onchange "brightnessctl set {}%"
+            ) 
+            (spotify)
+        )
+    )
+)

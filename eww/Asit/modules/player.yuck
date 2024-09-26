@@ -1,0 +1,57 @@
+
+
+(defwidget player []
+    (box 
+        :class "player-bx"
+        :valign "center" 
+        :space-evenly false
+        (eventbox
+                :cursor "default"
+                :onhover "${eww} update title_reveal=true"
+                :onhoverlost "${eww} update title_reveal=false"
+            
+            (box 
+                :space-evenly false
+                (box
+                    :class "spotify-icon" 
+                    (label 
+                        :text ""
+                    )
+                )
+                (revealer 
+                        :duration "400ms" 
+                        :transition "slideright"
+                        :reveal title_reveal
+                        (box 
+                            :class "player-title"
+                            (label 
+                                :text title
+                                :limit-width 15
+                            )
+                        )
+                )
+            )
+           
+        )
+        (box
+            :class "player-btn-bx" 
+            :space-evenly false
+            :spacing 7
+            (eventbox 
+                :class "player-btn"
+                :cursor "pointer"
+                (button :onclick "playerctl previous" "󰒮")
+            )
+            (eventbox 
+                :class "player-btn"
+                :cursor "pointer"
+                (button :onclick "playerctl play-pause" player-icon)
+            )
+            (eventbox 
+                :class "player-btn"
+                :cursor "pointer"
+                (button :onclick "playerctl next" "󰒭")
+            )
+        ) 
+    )
+)

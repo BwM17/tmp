@@ -1,0 +1,17 @@
+
+(defwidget infoslider [class value] 
+    (box 
+        :class class
+        :orientation "v" 
+        (progress  
+            :class "vol_slide"
+            :orientation "v"  
+            :flipped true
+            :value value 
+        )
+    )
+) 
+
+
+
+

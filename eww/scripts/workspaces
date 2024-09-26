@@ -1,0 +1,31 @@
+#!/usr/bin/env bash 
+
+
+function print_works() {  
+    local buf="" 
+    local workspaces_in=$(hyprctl workspaces -j | jq 'map({key: .id})')
+    local active=$(hyprctl monitors -j | jq '.[] | select(.focused) | .activeWorkspace.id')
+    local workspaces=($(echo "$workspaces_in" | jq -r '.[].key' | tr ' ' '\n' | sort -n)) 
+
+
+    for key in "${workspaces[@]}"; do 
+        if [[ "$key" != "-98" ]]; then  
+            if [[ "$key" == "$active" ]]; then
+                local ws=""
+                local class="focused"  
+            else  
+                local ws=""
+                local class="active"
+            fi 
+            buf+="(box :class \"workspace\" :halign \"center\" (button :class \"$class\" :onclick \"hyprctl dispatch workspace $key\" \"\"))"    
+        fi  
+    done  
+
+    
+    echo "(box :orientation \"h\" :space-evenly false :class \"works\" :halign \"center\" :valign \"center\" :vexpand true :hexpand true $buf)"
+}
+
+print_works 
+socat -u UNIX-CONNECT:/tmp/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock - | while read -r line; do
+    print_works
+done;

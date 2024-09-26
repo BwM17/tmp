@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+EWW=$(which eww) 
+
+$EWW update wifistyle="background-color: #ddd"      

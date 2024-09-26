@@ -1,0 +1,35 @@
+
+
+
+.player-bx{ 
+    //margin-left: 65px; 
+    padding: 0.4rem 0.8rem;
+    background-color: $Background-Alt; 
+    border-radius: 50px;
+}
+
+.spotify-icon{ 
+    color: $Lightgreen;
+    font-size: 26px; 
+    margin-right: 1.2rem; 
+    margin-left: -0.2rem;
+}
+
+.player-btn-bx{
+    font-size: 26;
+    margin-left: 0.3rem; 
+    margin-right: 0.2rem; 
+    color: $Lightgray;
+}
+
+.player-title{
+    font-size: 16px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: 500;
+    color: $Lightgray; 
+}
+
+.player-btn:hover{
+    color: $Foreground; 
+} 

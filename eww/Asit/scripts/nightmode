@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+EWW=$(which eww)
+FILE="/tmp/nightmode"
+
+if [[ ! -f "$FILE" ]]; then
+    touch $FILE 
+    brightnessctl set 10% 
+    brightnessctl --device="tpacpi::kbd_backlight" s 2 
+    $EWW update night_icon="  " night="background: linear-gradient(to left, #000, #82AAFF); color: #FFF;" night_style="color: #EBCB8B;"
+else   
+    rm $FILE
+    brightnessctl set 25% 
+    brightnessctl --device="tpacpi::kbd_backlight" s 0   
+    $EWW update night_icon="  " night="background: linear-gradient(to left, #FFF, #EBCB8B); color: #000;" night_style="color: #FFF;"
+fi
+
+
+

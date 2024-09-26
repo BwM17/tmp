@@ -1,0 +1,24 @@
+#!/usr/bin/env bash 
+
+artUrl=$(playerctl -p spotify metadata mpris:artUrl)  
+artCover="/tmp/cover.png" 
+
+function update_arturl_file(){
+    
+    if [ -f "/tmp/check_file" ]; then  
+        curent_artUrl=$(<"/tmp/check_file"); 
+
+        if [ "$current_artUrl" != "$artUrl" ]; then
+            rm "/tmp/check_file" 
+            rm $artCover 
+            curl -s $artUrl -o $artCover 
+        
+        else 
+            echo $artCover
+        fi
+    fi  
+    echo "$artUrl" >> "/tmp/check_file" 
+} 
+ 
+update_arturl_file 
+echo $artCover

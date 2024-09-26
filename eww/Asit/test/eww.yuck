@@ -1,0 +1,23 @@
+(defwindow test
+	:monitor 0 
+	:geometry (geometry 
+			:x "-25px" 
+			:y "92px"  
+			:width "500px"   
+			:height "600px"    
+			:anchor "top right") 
+	:stacking "bg" 
+	;;:reserve (struts :distance "59px" :side "top")
+	:windowtype "dock" 
+    :focusable true
+	:wm-ignore false
+	(inptest))
+
+
+(defwidget inptest[] 
+    (box 
+        (input
+            :value "passwort"
+        ) 
+)
+)

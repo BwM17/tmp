@@ -1,0 +1,36 @@
+
+; Listener 
+(deflisten workspaces "scripts/workspace")
+
+
+; polls 
+(defpoll time :interval "1s" "date '+%H:%M'")
+(defpoll vol :interval "1s" "amixer get Master | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'")
+(defpoll title :interval "1s" "scripts/player --title") 
+(defpoll artist :interval "1s" "scripts/player --artist")
+(defpoll player-icon :interval "1s" "scripts/player --icon")
+(defpoll bat :interval "4s" "acpi -b | grep -oP '\\d+%' | tr -d '%'")
+(defpoll bright :interval "1s" "brightnessctl i  | sed -n 2p | awk '{print $4}' | awk '{print substr($0, 2, length($0) - 3)}'")
+(defpoll user :interval "24h" "whoami") 
+(defpoll cover :interval "1s" "scripts/getArt")
+
+
+;vars  
+(defvar eww "/run/current-system/sw/bin/eww -c $HOME/.config/eww/sit ")
+(defvar pow_reveal false) 
+(defvar ram_reveal false)
+(defvar cpu_reveal false)
+(defvar title_reveal false)
+(defvar wifistyle "background-color: #fff")   
+
+(defvar night "background: linear-gradient(to left, #FFF, #EBCB8B);")  
+(defvar night_icon "  ")    
+(defvar night_style "color: #FFF")
+
+(defvar airplane "background: linear-gradient(to left, #fff, #999999);")   
+(defvar airplane_icon " 󰳇 ")     
+
+(defvar powersafe "background: linear-gradient(to left, #fff, #999999);")    
+(defvar powersafe_icon " 󰠠 ")      
+(defvar power_style "color: #EBCB8B;")  
+

@@ -1,0 +1,50 @@
+(defwidget spotify [] 
+    (overlay
+    (box :class "player_banner" :style "background-image: url('${cover}'); min-width: 450px; min-height: 200px")       
+    (box    
+        :class "player_ctrl"   
+        :orientation "v"   
+        :hexpand false 
+        :vexpand false
+
+            (box     
+                :class "player_info_outer" 
+                :hexpand false   
+                :vexpand false
+                :space-evenly false
+            (box 
+                :class "player_info" 
+                :space-evenly false  
+                :hexpand false 
+                :halign "start"
+                :orientation "v"
+                (label :halign "start" :class "player_title" :text title :limit-width 15)  
+                (label :halign "start" :class "player_artist" :text artist :limit-width 15)   
+            )  
+        ) 
+        
+          
+        (box   
+            :class "player_btn_bx"   
+            :halign "center"
+            :space-evenly false 
+            :hexpand false
+            :vexpand false
+            (button :class "player_btn":onclick "playerctl previous" "󰒮")
+            (button :class "player_btn":onclick "playerctl play-pause" "󰏤")
+            (button :class "player_btn":onclick "playerctl next" "󰒭")
+        )   
+
+
+        (box 
+            :class "player_slider" 
+            (scale
+                :min 0
+                :max  100
+                :value 20 
+                :onchange "playerctl position {}%"
+            )
+        ) 
+        )
+    )
+)

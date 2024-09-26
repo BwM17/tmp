@@ -1,0 +1,31 @@
+.vol_icon, .bright_icon{ 
+   color: $Foreground; 
+   font-size: 18px;    
+   margin: 1.5rem 0.5rem 0.5rem 1.7rem; 
+}  
+
+.vol_icon {
+    margin: 1.5rem 0.5rem 0.5rem 1.9rem;
+}
+
+
+.vol_slider scale trough{   
+    all:unset; 
+    background-color: white;    
+    border: 5px solid red;  
+    min-height: 10px;   
+    min-width: 75px; 
+    border-radius: 50px;    
+    margin: 1rem 2rem 0 1rem; 
+} 
+
+
+.vol_slider scale trough highlight{
+    all:unset;
+    background: purple;
+    border-radius: 50px; 
+    min-height: 10px;
+} 
+
+
+

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash 
+
+bat_perc=$(acpi -b | grep -oP '\d+%' | tr -d '%')  
+echo $bat_perc
+ 

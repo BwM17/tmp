@@ -1,0 +1,168 @@
+*{ 
+    //all:unset;
+    font-family: "Iosevka Nerd Font"
+} 
+
+@import "styles/colors/materialdark_theme.scss";
+@import "styles/windows.scss";
+@import "styles/bar.scss";
+@import "styles/player.scss";
+@import "styles/power.scss";
+@import "styles/settings.scss"; 
+@import "styles/spotify.scss";
+
+
+
+.time_inner{
+    margin-right: 5px; 
+    margin-left: 5px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 17px;
+} 
+
+
+progressbar { 
+  padding: 5px;
+}    
+
+
+progressbar trough{
+    background-color: $Background-Alt;  
+    min-width: 40px; 
+    border-radius: 50px;
+}
+
+progressbar progress{
+    //background-color: $Lightblue;  
+    background: linear-gradient(to bottom, $Lightblue, $Blue);
+    min-width: 40px;  
+    border-radius: 50px;
+}
+
+
+/*
+
+
+
+
+.settings{
+    margin-right: 10px;
+    margin-left: 5px;
+    color: #999999;
+}
+
+.settings:hover{
+    color: #F2828B;
+}
+
+
+
+.hib-btn, .sus-btn, .reb-btn, .exi-btn{
+	font-size: 18px;
+	margin-right: 5px;
+	color: #565a6e;
+}
+
+.pow-btn{
+	color: #F2828B;
+}
+
+.sus-btn:hover{
+	color: #EBCB8B;
+}
+
+.reb-btn:hover{
+	color: #81C995;
+}
+
+.hib-btn:hover{
+	color: #82AAFF; 
+}
+
+.exi-btn:hover{
+	color: #73daca; 
+}
+
+
+scale trough {
+    all:unset; 
+    background-color: #232637;
+    border-radius: 50px;
+    min-height: 5px;
+    min-width: 100px;
+    margin-left: 10px;
+}
+
+scale trough highlight {
+    all:unset; 
+    background-color: #bbdfd9;
+    border-radius: 10px;
+}
+
+.slider_outer{
+    margin-right: 17px;
+}
+
+.vol_icon{
+    color: #bbdfd9;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.vol_per{
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.graph_outer{
+    margin-right: 20px;
+}
+
+.graph_inner{
+    min-height: 25px;
+    min-width: 70px;
+    margin: 0px 0px 0px 7px;
+    border: solid 1px white;
+    border-radius: 6px;
+    color:#D8DEE9;
+}
+
+.graph_per{
+    font-size: 15px; 
+    font-weight: bolder;
+}
+
+.Ram-icon{
+    font-size: 18px;
+    color:#EBCB8B;
+    margin-right: 7px;
+}
+
+.Cpu-icon{
+    font-size: 16px;
+    color: #82AAFF;
+    margin-right: 10px;
+}
+
+
+
+.lbox_outer{ 
+    margin: 0 17px 0 17px;  
+    //background-color: #81C995;
+}  
+
+.icon_outer{
+    margin: 0 6px 0 6px; 
+}   
+
+
+
+.spacer{
+    min-width: 2px;  
+    min-height: 50px; 
+    margin: 0 2px 0 2px;
+    background-color: #232637;
+}
+
+*/

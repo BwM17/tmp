@@ -1,0 +1,126 @@
+(defwidget licon [path launch] 
+    (box   
+        :class "icon_outer" 
+        :hexpand false
+        (eventbox   
+            :cursor "pointer" 
+            :onclick launch
+            :class "icon"  
+            :space-evenly false
+                (image
+                    :path path 
+                    :image-width 45
+                    :image-height 45
+                ) 
+            )
+        )
+)
+
+(defwidget spacer []
+    (box 
+        :vexpand false
+        :class "spacer" 
+    )
+
+)
+
+
+
+
+
+
+(defwidget lbar[]
+    (box  
+        :hexpand false  
+        :space-evenly false
+        :class "lbox_outer" 
+        (licon 
+            :path "img/archlinux.svg"      
+            :launch ""
+        )  
+        (spacer)
+        (licon  
+            :path "img/com.brave.Browser.svg"  
+            :launch "scripts/launch --brave"
+        ) 
+        (licon 
+            :path "img/code.svg"
+            :launch "scripts/launch --code"
+        ) 
+        (licon 
+            :path "img/nvim.svg"
+            :launch "scripts/launch --nvim"
+        ) 
+        (licon 
+            :path "img/discord.svg"
+            :launch "scripts/launch --discord"
+        ) 
+        (licon 
+            :path "img/steam.svg" 
+            :launch "scripts/launch --steam"
+        ) 
+        (licon 
+            :path "img/obsidian.svg" 
+            :launch "scripts/launch --obsidan"
+        ) 
+        (licon 
+            :path "img/spotify.svg"
+            :launch "scripts/launch --spotify"
+        ) 
+        (licon 
+            :path "img/wireshark.svg"
+            :launch "scripts/launch --wireshark"
+        ) 
+        (licon 
+            :path "img/virt-manager.svg" 
+            :launch "scripts/launch --virt"
+        ) 
+        (licon 
+            :path "img/kitty.svg" 
+            :launch "scripts/launch --kitty"
+        ) 
+        (licon 
+            :path "img/htop.svg"  
+            :launch "scripts/launch --htop"
+        ) 
+        (spacer) 
+                (licon 
+            :path "img/folder-blue.svg"  
+            :launch "scripts/launch --folder"
+        ) 
+                (licon 
+            :path "img/folder-blue-download.svg" 
+            :launch "scripts/launch --download"
+        ) 
+                (licon 
+            :path "img/folder-blue-pictures.svg"  
+            :launch "scripts/launch --pics"
+        )
+                (licon 
+            :path "img/folder-blue-code.svg"  
+            :launch "scripts/launch --prog"
+        )  
+        
+        (spacer) 
+        (licon 
+            :path "img/reddit.svg" 
+            :launch "scripts/launch --reddit"
+        ) 
+
+        (licon 
+            :path "img/youtube.svg"  
+            :launch "scripts/launch --youtube"
+        )
+
+        (licon 
+            :path "img/github.svg"  
+            :launch "scripts/launch --github" 
+        ) 
+
+    ) 
+)  
+ 
+
+
+
+

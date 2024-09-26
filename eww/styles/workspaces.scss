@@ -1,0 +1,23 @@
+.works{ 
+    margin-left: 0.2rem;  
+    background-color: $Accent;
+    border-radius: 50px;  
+    padding: 0.2rem 0.2rem;
+}       
+
+
+.active {
+    border-radius: 50px; 
+    margin: 0.2rem 0.2rem;     
+    padding: 0.1rem 0.75rem;   
+    background-color: $Background-Alt;
+    transition: 1s; 
+} 
+
+.focused { 
+    border-radius: 50px;
+    background: $Lightblue; 
+    margin: 0.2rem 0.2rem;  
+    padding: 1rem 0.4rem;  
+    padding: 0.1rem 1.5rem;
+}

@@ -1,0 +1,58 @@
+
+.player_banner{
+    border-radius: 16px; 
+    margin: 1rem;     
+    background-size: cover; 
+    background-position: center; 
+} 
+
+.player_ctrl{ 
+    color: $Foreground;
+    background:linear-gradient(to bottom, rgba($color: $Background,  $alpha: 1), rgba($color: $Background, $alpha: 0.4));       
+    border-radius: 16px; 
+    margin: 0 2rem 2rem 2rem; 
+}  
+
+
+.player_title{
+    color: $Foreground; 
+    font-size: 25px;
+    font-weight: bolder;  
+    margin-top:  1rem; 
+    margin-left: 1rem;
+}   
+
+.player_artist{
+   color: $Lightgray;
+   font-size: 17px;   
+   font-weight: bolder;
+   margin-left: 1rem;
+}
+
+
+
+.player_btn_bx{
+    font-size: 55px;
+}
+
+.player_btn{
+    margin: 0 2rem 0 2rem;
+}
+.player_slider scale trough{   
+    all:unset; 
+    background-color: rgba($color: $Background-Alt,  $alpha: 0.9);     
+    min-height: 10px;    
+    min-width: 250px; 
+    border-radius: 50px;    
+    margin: 2rem 2rem 2rem 2rem;
+} 
+
+
+.player_slider scale trough highlight{
+    all:unset;
+    background: $Foreground; 
+    border-radius: 50px; 
+    min-height: 10px;
+}  
+
+

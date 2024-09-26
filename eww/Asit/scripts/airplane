@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+EWW=$(which eww) 
+FILE="/tmp/airplane" 
+
+if [[ ! -f "$FILE" ]]; then 
+    touch $FILE   
+    rfkill block wifi
+    $EWW update airplane_icon=" 󰚻 " 
+    $EWW update airplane="background: linear-gradient(to left, #FFF, #BBDFD9);"  
+else   
+    rm $FILE 
+    rfkill unblock wifi
+    $EWW update airplane_icon=" 󰳇 " 
+    $EWW update airplane="background: linear-gradient(to left, #FFF, #999999); color: #000;"
+fi

@@ -1,0 +1,42 @@
+
+
+(defwidget time [] 
+    (box 
+        :halign "end" 
+        :space-evenly false
+    (eventbox 
+        :cursor "pointer" 
+        (box
+            :orientation "h"
+            :space-evenly false 
+            (box 
+                :class "time_inner"
+                :valign "center"
+                (label
+                    :text time
+                )
+            )
+        )
+    ) 
+    )
+)
+
+
+(defwidget launcher[class onclick icon]     
+    (box  
+        :orientation "h" 
+        :class class
+        :halign "center"
+        :valign "center"
+        (button 
+            :onclick onclick   
+            icon   
+        )
+    ) 
+)
+    
+
+
+
+
+

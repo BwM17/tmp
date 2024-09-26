@@ -1,0 +1,79 @@
+#!/usr/bin/env bash  
+
+
+case $1 in 
+
+    "--steam" )
+        steam &
+    ;; 
+
+    "--discord" ) 
+        discord &
+    ;;
+
+    "--code" ) 
+        code & 
+    ;; 
+
+    "--brave" ) 
+        brave & 
+    ;; 
+
+    "--nvim" ) 
+        kitty nvim &
+    ;; 
+
+    "--spotify" ) 
+        spotify & 
+    ;; 
+
+    "--obsdian" ) 
+        obsdian & 
+    ;; 
+
+    "--wireshark" ) 
+        wireshark & 
+    ;; 
+
+    "--virt" ) 
+        virt-manager & 
+    ;; 
+
+    "--Kitty" ) 
+        kitty %
+    ;; 
+
+    "--htop" ) 
+        kitty htop & 
+    ;;
+
+    "--folder" ) 
+        pcmanfm $HOME& 
+    ;; 
+
+    "--download") 
+        pcmanfm $HOME/Downloads & 
+    ;;
+
+    "--pics") 
+        pcmanfm $HOME/Pictures & 
+    ;; 
+
+    "--prog")  
+        pcmanfm $HOME/Programming & 
+    ;; 
+
+    "--reddit") 
+        brave "www.reddit.com" & 
+    ;; 
+
+    "--github") 
+        brave "www.github.com" & 
+    ;;  
+
+    "--youtube") 
+        brave "www.youtube.com" &
+    ;; 
+
+
+esac 

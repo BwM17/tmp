@@ -1,0 +1,58 @@
+
+
+(defwidget bar []
+    (centerbox 
+        (left)   
+        (player) 
+        (right)
+    )
+)
+
+
+(defwidget workspace []
+    (box 
+        :space-evenly false
+        :class "workspace-outer"
+        (literal 
+            :content workspaces
+        )
+    )
+)  
+
+
+
+(defwidget left []
+    (box 
+        :class "left"
+        :space-evenly false
+        :hexpand false 
+        :vexpand false
+            (launcher
+                :class "logo_launcher"  
+                :onclick "" 
+                :icon "  " 
+            )
+            (workspace)
+    )
+) 
+
+
+(defwidget right [] 
+    (box   
+        :halign "end"
+        :space-evenly false
+        (power)  
+        (box 
+            :halign "center" 
+            :valign "center" 
+            (circular
+                :outer "bat"  
+                :tooltip bat 
+                :inner "bat_inner" 
+                :thickness 15
+                :value bat
+            )
+        )
+    )
+) 
+

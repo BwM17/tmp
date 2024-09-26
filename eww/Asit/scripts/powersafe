@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+EWW=$(which eww) 
+FILE="/tmp/airplane" 
+
+if [[ ! -f "$FILE" ]]; then 
+    touch $FILE   
+    rfkill block wifi 
+    brightnessctl set 10% 
+    brightnessctl --device="tpacpi::kbd_backlight" s 0   
+    $EWW update powersafe_icon="  " powersafe="background: linear-gradient(to left, #FFF, #BBDFD9);" power_style="color: #81C995;"
+else   
+    rm $FILE 
+    rfkill unblock wifi 
+    brightnessctl set 30%
+    $EWW update powersafe_icon="  " powersafe="background: linear-gradient(to left, #FFF, #999999); color: #000;"  power_style="color: #EBCB8B;" 
+fi

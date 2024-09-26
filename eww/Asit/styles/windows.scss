@@ -1,0 +1,16 @@
+
+
+.bar, .settings, .light, .vol, .wifi{  
+    background-color: $Background;
+    color: $Foreground;
+}  
+
+.bar, .light, .vol{ 
+    border-radius: 50px; 
+} 
+ 
+.test .settings{ 
+    background-color: $Background; 
+    border-radius: 16px;
+}
+

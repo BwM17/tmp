@@ -1,0 +1,9 @@
+(defwidget launcher []
+    (box 
+        :class "launcher"  
+        (button 
+            :onclick "scripts/open_settings"
+            ""
+        )
+    )
+)
